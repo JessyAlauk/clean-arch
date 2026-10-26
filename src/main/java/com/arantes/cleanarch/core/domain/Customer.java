@@ -53,4 +53,14 @@ public class Customer {
                 this.isValidCpf
         );
     }
+
+    public Customer withId(String id) {
+        return new Customer(
+                id,
+                this.name,
+                this.cpf,
+                this.address,
+                this.isValidCpf
+        );
+    }
 }
