@@ -1,10 +1,19 @@
+server:
+  port: 8081
+
 arantes:
   client:
     address:
-      url:http://localhost:8082/addresses
+      url: http://localhost:8082/addresses
 
 
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/cleanarch
+      uri: mongodb://root:example@localhost:27017/cleanarch?authSource=admin
+#      host: localhost
+#      port: 27017
+#      authentication-database: admin
+#      username: root
+#      password: example
+#      database: cleanarch

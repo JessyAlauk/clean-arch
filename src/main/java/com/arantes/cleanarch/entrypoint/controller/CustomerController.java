@@ -41,7 +41,7 @@ public class CustomerController {
     @PostMapping
     public ResponseEntity<Void> insert(@Valid @RequestBody CustomerRequest customerRequest) {
         var customer = customerMapper.toCustomer(customerRequest);
-        insertCustomerUsecase.insert(customer, customerRequest.zpiCode());
+        insertCustomerUsecase.insert(customer, customerRequest.zipCode());
         return ResponseEntity.ok().build();
     }
 
@@ -57,7 +57,7 @@ public class CustomerController {
                                        @Valid @RequestBody CustomerRequest customerRequest) {
         var customer = customerMapper.toCustomer(customerRequest);
         customer.withId(id);
-        updateCustomerUseCase.update(customer, customerRequest.zpiCode());
+        updateCustomerUseCase.update(customer, customerRequest.zipCode());
         return ResponseEntity.noContent().build();
     }
 

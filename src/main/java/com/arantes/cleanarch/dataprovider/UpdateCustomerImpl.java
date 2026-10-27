@@ -18,10 +18,6 @@ public class UpdateCustomerImpl implements UpdateCustomer {
         this.customerEntityMapper = customerEntityMapper;
     }
 
-    public UpdateCustomerImpl(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
-    }
-
     @Override
     public void update(Customer customer) {
         var customerEntity = customerEntityMapper.toCustomerEntity(customer);
